@@ -1,35 +1,35 @@
-# SANITY
+# SUNITY
 
-This template should help get you started developing with Vue 3 in Vite.
+Сайт сонячних станцій: https://sunity-ua.com
 
-## Recommended IDE Setup
+## Розробка
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Потрібен Node.js 22.12+. Команди: npm ci, npm run dev, npm test, npx eslint ., npm run build, npm run preview.
 
-## Customize configuration
+## Структура
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- src/components/sections/ — головна, про нас, вартість, галерея, контакти.
+- src/components/ — навігація, спільні телефони, калькулятор і форма.
+- src/data/contacts.js — єдине джерело телефонів, пошти й соцмереж.
+- src/data/content.js — тексти, ціни, фото й відео.
+- src/services/contact.js — EmailJS, збережено публічні ідентифікатори чинної форми.
+- src/utils/validation.js — перевірка українських телефонів та імен.
+- src/styles/main.css — загальні стилі; стилі форми й калькулятора у компонентах.
+- public/ — статичні зображення, відео, favicon, CNAME.
+- tests/ — контакти, валідація та контракт відправлення (без реальних листів).
 
-## Project Setup
+## Публікація
 
-```sh
-npm install
-```
+GitHub Pages → Settings → Pages → Source: **GitHub Actions**.
+Кожен push у master запускає перевірки, Vite build і публікацію dist через .github/workflows/deploy.yml.
+Власний домен збережено у public/CNAME; DNS змінювати не потрібно.
+Старий ручний npm run deploy у гілку gh-pages більше не використовується.
 
-### Compile and Hot-Reload for Development
+## Відновлення
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Код реконструйовано зі збірки gh-pages d1a6d77e2eb462dc73b6a9b2ee06b35b74291bde.
+Початкова master: 004a261cd4ca38fadb9b9353d5bef4354b370ae1.
+Це читабельна реконструкція Vue-компонентів, а не побайтове відновлення втрачених вихідних файлів.
+Збережено тексти, ціни, 8 проєктів, 2 відео, аналітику й параметри EmailJS.
+Калькулятор відтворює старі припущення (8 год/добу, 4,32 грн/кВт·год); його значення — ілюстрація, не прогноз.
+Форму перевірено з підміною транспортного шару; реальна доставка листів залежить від чинного налаштування EmailJS.
