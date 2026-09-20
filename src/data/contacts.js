@@ -13,7 +13,7 @@ export const socialLinks = [
   },
   {
     name: 'Telegram',
-    href: 'https://t.me/Sunity_UA',
+    href: 'https://t.me/SunityUA',
     icon: 'fab fa-telegram',
     className: 'telegram',
   },
